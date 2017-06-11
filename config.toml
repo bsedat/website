@@ -153,6 +153,12 @@ defaultContentLanguageInSubdir = false
     user = "zarreon"
     link = "https://www.reddit.com/user/zarreon"
 
+  [[params.contact]]
+    icon = "hacker-news"
+    icon_pack = "fa"
+    user = "bensedat"
+    link = "https://news.ycombinator.com/user?id=bensedat"
+
 
 # Navigation Links
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
