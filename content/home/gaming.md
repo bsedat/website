@@ -10,7 +10,7 @@ weight = 2
 +++
 
 ## Steam
-![Steam](http://steamsignature.com/profile/default/76561197977552377.png)
+![Steam](https://steam.mmosvc.com/76561197977552377/v1.png)
 
 ## Xbox Live
 <iframe src="https://gamercard.xbox.com/Zarreon.card" seamless height="140" width="204" style="border: none; overflow: hidden;">Zarreon</iframe>
