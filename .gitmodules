@@ -1,3 +1,11 @@
 [submodule "themes/academic"]
 	path = themes/academic
 	url = https://github.com/gcushen/hugo-academic.git
+[submodule "sites/bensedat.me"]
+	path = sites/bensedat.me
+	url = git@github.com:bsedat/bensedat.me.git
+	branch = master
+[submodule "sites/bensedat.name"]
+	path = sites/bensedat.name
+	url = git@github.com:bsedat/bensedat.name.git
+	branch = master

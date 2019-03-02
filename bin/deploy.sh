@@ -1,24 +1,34 @@
 #!/bin/bash
 
+# Modified from https://gohugo.io/hosting-and-deployment/hosting-on-github/
+
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
-# Build the project.
-hugo # if using a theme, replace by `hugo -t <yourtheme>`
+for site in 'bensedat.name' 'bensedat.me'
+do
+  # Build the project.
+  hugo --environment $site
 
-# Go To Public folder
-cd public
-# Add changes to git.
-git add -A
+  # Go To Public folder
+  pushd sites/$site
 
-# Commit changes.
-msg="rebuilding site `date`"
-if [ $# -eq 1 ]
-  then msg="$1"
-fi
-git commit -m "$msg"
+  # Add CNAME file
+  echo $site > CNAME
 
-# Push source and build repos.
-git push origin master
+  # Add changes to git.
+  git add -A
 
-# Come Back
-cd ..
+  # Commit changes.
+  msg="rebuilding site `date`"
+  if [ $# -eq 1 ]
+    then msg="$1"
+  fi
+  git commit -m "$msg"
+
+  # Push source and build repos.
+  git push origin master
+
+  # Come Back
+  popd
+done
+
